@@ -1,0 +1,135 @@
+
+.form{//selecion du bouton::changement de border
+    &__group{
+        & input {
+            border: 2px solid $color-blue;
+            border-radius: 100rem;
+            color: $cd-txt;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            outline: none;
+            padding: .5rem 1.5rem;
+            width: 90%;
+            transition: background-color 500ms;//fait apparaître lentement
+                &:focus {
+                    border: 2px solid $cd-txt;
+                    }
+                &:not(:focus):invalid{//si l'email entré n'est pas valide et que la zone email n'est plus sélectionnée
+                    background: $cd-danger;
+                    border: 2px, solid, $cd-danger;
+                    color: $cd-txt--invalid;
+                    }
+             }
+    }
+}
+
+    .btn{
+       @extend %btn;
+        &:active + .ball{
+            transform: scale(20);
+        }
+    }
+        .ball {
+            transform: scale(0.1);
+            transition: transform 2000ms;
+            width: 40px;
+            height: 40px;
+            background: $cd-danger;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    //BTN2
+    .btn2{
+        @extend %btn;
+        transition: transform 550ms, background-color 300ms 150ms; //2eme chiffre = transition delay
+
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        &:hover{
+            transform: scale(1.13);
+            background-color: $cd-btn-end;
+        }
+    }
+    .btn3{
+        @extend %btn;
+         &:active + .ball3{
+            left: 100%;
+            transform: translatex(-100%);
+         }
+
+     }
+         .ball3 {
+            transition: left 1s, transform 1s ease-in-out;
+            @extend %ball;
+             left: 0;             
+
+         }
+         .btn4{
+            @extend %btn;
+            margin-top: 150px;
+             &:active + .ball4{
+                transform: translate(150px, -7vh) scaleX(1.5);
+                border-radius: 0%;
+             }
+    
+         }
+             .ball4 {
+                transition: transform 1s ease-in-out, border-radius 1s, 600ms;//600= au delay
+                @extend %ball;
+                left: 0;             
+    
+             }
+
+ .btn5{
+    @extend %btn;
+    margin-top: 150px;
+    &:active + .box5{
+        transform: scale(1) rotate(0deg);
+        span{
+            transform: translatey(0);
+        }
+     }
+    }
+.box5{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: $cd-danger;
+    margin-bottom: 100px;
+    margin-left: 50%;
+    margin-right: auto;
+    transform: scale(0.1) rotate(-90deg);
+    transition: transform 300ms ease-in-out;
+    overflow: hidden;
+    display: flex;
+    
+
+    span{
+        color: $color-pink;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.5rem;
+        margin: auto;
+        transform: translateY(950%);
+        transition: transform 280ms ease-out 50ms;
+        border: 3px, solid;
+                }
+            }
+.box6{
+    &__rotate{
+    @extend %btn;
+    width: 20%;
+    text-align: center;
+    margin-bottom: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    transform: rotate(-360deg) skew(0deg, 0deg);
+    transition: transform 500ms ease-in-out;
+    &:hover{
+        transform: rotate(0deg) skew(15deg, 15deg);
+    }
+    }
+}

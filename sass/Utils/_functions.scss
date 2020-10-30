@@ -1,0 +1,24 @@
+
+@function pastel($couleur){
+    $hue: hue($couleur);
+    $sat: 100%;
+    $light: 90%;
+    $pastel: hsl($hue, $sat, $light);
+    @return $pastel;
+  }
+%btn{
+  background: rgb(173, 173, 236);;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  border: 3px solid $cd-btn-end;
+}
+%ball{
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: $cd-danger;
+  margin-bottom: 1rem;
+  border-radius: 50%; 
+}

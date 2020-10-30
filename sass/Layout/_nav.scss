@@ -1,0 +1,30 @@
+a
+{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+}
+li{
+    color: $color-brown;
+    padding: 10px;
+    background-color: lighten($color-green, 34%);
+    border-radius: 10px;
+    margin-left: 6px;
+    margin-right: 6px;//CREATION TRANSITION SUR :HOVER
+    transform: scale(1);
+   /* transition-property: transform; 1ère methode
+    transition-duration: 400ms;*/
+    transition: transform 400ms;
+    @include heading-shadow($color-green);
+    &:hover{
+        transform: scale(1.15);
+    }
+    &:active{
+        transform: scale(1.15);
+        background-color: pastel(green);
+    }
+}

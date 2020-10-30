@@ -1,0 +1,44 @@
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px 10px 10px 10px;
+    background-color: rgb(173, 173, 236);
+    border-radius: 10px;
+    @include heading-shadow($color-blue);
+}
+a
+{
+    text-decoration: none;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
+}
+li{
+    color: $color-brown;
+    padding: 10px;
+    background-color: lighten($color-green, 34%);
+    border-radius: 10px;
+    margin-left: 6px;
+    margin-right: 6px;//CREATION TRANSITION SUR :HOVER
+    transform: scale(1);
+   /* transition-property: transform; 1ère methode
+    transition-duration: 400ms;*/
+    transition: transform 400ms;
+    @include heading-shadow($color-green);
+    &:hover{
+        transform: scale(1.15);
+    }
+    &:active{
+        transform: scale(1.15);
+        background-color: pastel(green);
+    }
+}
+h1{
+    color: $color-dark;
+    font-family: 'hand-write', sans-serif;
+
+}

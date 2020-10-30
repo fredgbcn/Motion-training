@@ -1,0 +1,19 @@
+@mixin heading-shadow($clr){
+    @if(lightness($clr) < 25%){
+        $clr: lighten($clr, 30%);
+    }
+    @else{
+        $clr: darken($clr, 5%);
+    }
+    box-shadow: 3px 4px $clr;
+}
+
+@mixin heading-txt-shadow($clr){
+    @if(lightness($clr) < 25%){
+        $clr: lighten($clr, 30%);
+    }
+    @else{
+        $clr: darken($clr, 10%);
+    }
+    text-shadow: 2px 3px $clr;
+}

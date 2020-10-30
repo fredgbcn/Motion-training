@@ -1,0 +1,225 @@
+@charset "UTF-8";
+.box6__rotate, .btn5, .btn4, .btn3, .btn2, .btn {
+  background: #adadec;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border-radius: 10rem;
+  border: 3px solid #011c37;
+}
+
+.ball4, .ball3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #b20a37;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #dae3d0;
+  font-size: 100%;
+}
+
+@font-face {
+  font-family: "hand-write";
+  src: url("font/hand_write.ttf") format("ttf");
+}
+.form__group input {
+  border: 2px solid #8c94ac;
+  border-radius: 100rem;
+  color: #6300a0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  outline: none;
+  padding: 0.5rem 1.5rem;
+  width: 90%;
+  transition: background-color 500ms;
+}
+.form__group input:focus {
+  border: 2px solid #6300a0;
+}
+.form__group input:not(:focus):invalid {
+  background: #b20a37;
+  border: 2px, solid, #b20a37;
+  color: #fff;
+}
+
+.btn:active + .ball {
+  transform: scale(20);
+}
+
+.ball {
+  transform: scale(0.1);
+  transition: transform 2000ms;
+  width: 40px;
+  height: 40px;
+  background: #b20a37;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn2 {
+  transition: transform 550ms, background-color 300ms 150ms;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.btn2:hover {
+  transform: scale(1.13);
+  background-color: #011c37;
+}
+
+.btn3:active + .ball3 {
+  left: 100%;
+  transform: translatex(-100%);
+}
+
+.ball3 {
+  transition: left 1s, transform 1s ease-in-out;
+  left: 0;
+}
+
+.btn4 {
+  margin-top: 150px;
+}
+.btn4:active + .ball4 {
+  transform: translate(150px, -7vh) scaleX(1.5);
+  border-radius: 0%;
+}
+
+.ball4 {
+  transition: transform 1s ease-in-out, border-radius 1s, 600ms;
+  left: 0;
+}
+
+.btn5 {
+  margin-top: 150px;
+}
+.btn5:active + .box5 {
+  transform: scale(1) rotate(0deg);
+}
+.btn5:active + .box5 span {
+  transform: translatey(0);
+}
+
+.box5 {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #b20a37;
+  margin-bottom: 100px;
+  margin-left: 50%;
+  margin-right: auto;
+  transform: scale(0.1) rotate(-90deg);
+  transition: transform 300ms ease-in-out;
+  overflow: hidden;
+  display: flex;
+}
+.box5 span {
+  color: #d1b1ae;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  margin: auto;
+  transform: translateY(950%);
+  transition: transform 280ms ease-out 50ms;
+  border: 3px, solid;
+}
+
+.box6__rotate {
+  width: 20%;
+  text-align: center;
+  margin-bottom: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotate(-360deg) skew(0deg, 0deg);
+  transition: transform 500ms ease-in-out;
+}
+.box6__rotate:hover {
+  transform: rotate(0deg) skew(15deg, 15deg);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2px 10px 10px 10px;
+  background-color: #adadec;
+  border-radius: 10px;
+  box-shadow: 3px 4px #7d86a1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+li {
+  color: #76764b;
+  padding: 10px;
+  background-color: #dae3d0;
+  border-radius: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
+  transform: scale(1);
+  /* transition-property: transform; 1ère methode
+   transition-duration: 400ms;*/
+  transition: transform 400ms;
+  box-shadow: 3px 4px #789458;
+}
+li:hover {
+  transform: scale(1.15);
+}
+li:active {
+  transform: scale(1.15);
+  background-color: #ccffcc;
+}
+
+h1 {
+  color: #2e3322;
+  font-family: "hand-write", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+li {
+  color: #76764b;
+  padding: 10px;
+  background-color: #dae3d0;
+  border-radius: 10px;
+  margin-left: 6px;
+  margin-right: 6px;
+  transform: scale(1);
+  /* transition-property: transform; 1ère methode
+   transition-duration: 400ms;*/
+  transition: transform 400ms;
+  box-shadow: 3px 4px #789458;
+}
+li:hover {
+  transform: scale(1.15);
+}
+li:active {
+  transform: scale(1.15);
+  background-color: #ccffcc;
+}
+
+/*# sourceMappingURL=style.css.map */
